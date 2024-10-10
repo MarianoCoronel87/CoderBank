@@ -19,7 +19,15 @@
             </div>  
         </nav>  
     </header>  
-    <main id="main" class="d-flex justify-content-center shadow p-3 rounded">  
+    <main id="main" class="d-flex justify-content-center shadow p-3 rounded">
+        <section id="cotizaciones" class="shadow p-3 mb-5 bg-white rounded">  
+            <h2>Cotización Dólar Blue</h2>  
+            <div id="contenedor-cotizaciones">  
+              <p>Compra: <span id="compraBlue">Cargando...</span></p>  
+              <p>Venta: <span id="ventaBlue">Cargando...</span></p>  
+            </div>  
+          </section>  
+        </main>  
         <section class="saldo shadow p-3 mb-5 bg-white rounded">   
             <div>  
                 <i class="bi bi-cash-stack" style="font-size: 3rem; color:black;"></i>   
@@ -27,21 +35,22 @@
             <div id="saldo">$0</div>  
             <button><i id="eye-icon" class="bi bi-eye fs-2 "></i></button>  
         </section>  
-        <section id="buttons" class="bg-white shadow p-3 mb-5 rounded">  
+        <section id="buttons" class="bg-white shadow p-3 mb-5 rounded d-flex align-items-center justify-content-center">  
             <button id="depositarBoton" class="btn btn-success m-2">Depositar Saldo</button>  
             <button id="retirarBoton" class="btn btn-danger m-2">Retirar Saldo</button>  
             <button id="prestamoBoton" class="btn btn-primary m-2">Pedir Préstamo</button>  
         </section>  
         <section id="movimientos" class="shadow p-3 mb-5 bg-white rounded">  
-            <h2>Mis movimientos</h2>  
-            <div id="contenedor-movimientos"></div>  
+            <h2 class="text-center">Mis movimientos</h2>  
+            <div id="contenedor-movimientos" class="text-center"></div>  
         </section>  
     </main>  
     <footer id="footer">  
         <p>© 2023 Banco Coder. Todos los derechos reservados.</p>  
     </footer>  
 
-    <!-- Scripts -->  
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>    
     <script src="../js/utils.js"></script>
     <script src="../js/clases.js"></script>  
     <script src="../js/main.js"></script> 
